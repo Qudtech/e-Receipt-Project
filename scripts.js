@@ -63,7 +63,7 @@ else if ($("tr").last().find("#Price").val() == '')
     }
    else 
    {
-         var tr = "<tr><td><span id='serial'></span></td><td><input type='text' value='' id='Items' class='form-control form-control-sm'></td><td><input type='number' value='' id='Price' class='form-control form-control-sm' ></td><td><input type='number' value='1' id='Quantity' class='form-control form-control-sm' ></td><td><input type='number' value='' id='Total' disabled class='form-control form-control-sm' ></td><td style='width:120px'><button id='edit' class='btn btn-dark btn-sm mr-2'><i id='i1' class='fa fa-edit'></i></button><button id='delete' class='btn btn-dark btn-sm mr-2'><i id='i2' class='fa fa-trash'></i></button></td></tr>";
+         var tr = "<tr><td><span id='serial'></span></td><td><input type='text' value='' id='Items' class='form-control rounded-0 form-control-sm'></td><td><input type='number' value='' id='Price' class='form-control rounded-0 form-control-sm' ></td><td><input type='number' value='1' id='Quantity' class='form-control rounded-0 form-control-sm' ></td><td><input type='number' value='' id='Total' disabled class='form-control rounded-0 form-control-sm' ></td><td style='width:90px'><button id='edit' class='btn btn-secondary rounded-0 btn-sm mr-2'><i id='i1' class='fa fa-edit'></i></button><button id='delete' class='btn btn-danger rounded-0 btn-sm mr-2'><i id='i2' class='fa fa-trash'></i></button></td></tr>";
         $("tbody").append(tr);
         trDisabled();
         counter();
@@ -105,6 +105,11 @@ $(document).on("click", "#edit", function () {
          $('#modal_RTable').html(RTable);
          $('td:last-child').each(function () {
              $(this).last('td').hide();
+
+         });
+         $('td .form-control').each(function () {
+             $(this).last('td').css('border', '0');
+             $(this).removeAttr("readonly", "readonly");
          });
          $('thead tr th:last').hide();
          
@@ -116,6 +121,10 @@ $(document).on("click", "#edit", function () {
         $('thead tr th:last').show();
         $('td:last-child').each(function () {
              $(this).last('td').show();
+         });
+        $('td .form-control').each(function () {
+             $(this).last('td').css('border', '1');
+             $(this).attr("readonly", "readonly");
          });
 
     })
