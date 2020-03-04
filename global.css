@@ -1,0 +1,72 @@
+a{
+    color:#5A6268;
+}
+#dialog{
+    width: 100%;
+}
+/* .table-hover tbody tr{
+    background-color: #F8F9FA;
+    transition: 0.1s;
+  
+} */
+
+.view-title p{
+   margin: 0;
+   padding: 0;
+   font-size: 14px;
+   font-weight: bold;
+}
+.table-hover tbody tr:hover{
+  background-color: white;
+  box-shadow: 2px 2px 4px #999;
+  border-radius: 9px;
+}
+.field-icon {
+    float: right;
+    margin-left: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+#trEdit, #trDelete{
+    position: relative;
+    float:right;
+    /* display: none; */
+}
+#con{
+    max-height: 400px;
+    overflow-y: hidden;
+    margin-bottom: 400px;
+
+}
+.url-style{
+    font-weight: bold; font-size: 0.7em;
+    color: #999;
+}
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+    color: white;
+    padding: 2px;
+  }
+#myInput{
+    margin-left: 140px;
+    width: 520px;
+    border: 1px solid rgb(226, 228, 230);
+}
+
+.err{
+    margin-top: 0px;
+    font-size: 0.8em;
+    color: crimson;
+    text-align: left;
+}
+  @media (max-width: 768px) {
+    #myInput{
+        margin-left: 0px;
+        width: 120px;
+        
+    }
+ }

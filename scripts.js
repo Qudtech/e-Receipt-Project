@@ -129,3 +129,50 @@ $(document).on("click", "#edit", function () {
 
     })
 });
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+   // #trDelete
+$(document).on('click', "#trDelete", function(){
+  $(this).closest('tr').remove();
+})
+$(document).on('click', "#trDelete", function(){
+  $(this).closest('tr').remove();
+})
+
+$('tr').on("click", function(){
+  var m = $(this).closest('tr').val();
+  console.log(m);
+})
+
+$( function() {
+  $( document ).tooltip();
+} );
+
+$(document).on('click', 'trEdit', ()=> {
+    // body...
+    console.log($(this).closest('tr:first-child').val());
+})
+
+
+  addEventListener('click', function(event){
+    if(event.target.innerHTML == '<span class="fa fa-edit"></span>'){
+      // this.target.
+      
+    }
+  })
+
